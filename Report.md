@@ -51,7 +51,7 @@ We use the following hyperparameters:
 * **`LR = 5e-4`**
 * **`UPDATE_EVERY = 4`**
 
-We choose a simple neural network acrhicture consisting of fully connected (linear) layers only. We can specify the number of hidden layers and their corresponding sizes as a Python list.
+We choose a simple neural network architecture consisting of fully connected (linear) layers only. We can specify the number of hidden layers and their corresponding sizes as a Python list.
 In our experiments we used:
 
 * **`fc_layer_sizes = [64, 128]`**
@@ -62,7 +62,7 @@ For the Dueling DQN we use the last two specified layers for the parallel networ
 ## Achieved Scores (Rewards)
 
 We have trained Standard, Double and Dueling DQN agents with the described parameters until they achieved an average episodic reward of +13 over 100 consecutive episodes.
-Below you can see a plot of the resulting moving average scores (rewards) against the number of episodes trained.
+Below you can see a plot of the resulting scores (rewards) against the number of episodes trained.
 
 It is difficult to compare the performances of Standard, Double and Dueling DQN since we did not optimize for the other training hyperparameters, which might have a significant performance influence. In particular, the exploration seems to have a high impact on the required amount of training episodes.
 Furthermore, from single training runs, no statistically significant results can be deduced. Ideally, one would repeat the same experiment several times with different `seed` values and then compute both mean and standard deviation over the runs. We leave this as an exercise to our readers.
@@ -74,5 +74,5 @@ The important take-away here is that each of the agents is able to solve the RL 
 ## Ideas for Future Work
 
 As mentioned above, we did not optimize the hyperparameters of the training but chose a set that seemed to work well. This is a future work topic.
-Furthermore, repeating the sam experiment several times, computing the means and standard deviations of the different agents would be great to make statistically significant claims about the differences in the agents' performances.
+Furthermore, repeating the same experiment several times, computing the means and standard deviations of the different agents would be great to make statistically significant claims about the differences in the agents' performances.
 Finally, another idea for future work is to implement and evaluate further DQN improvements as suggested by Rainbow DQN. For more details, on Rainbow DQN please read [this research paper](https://arxiv.org/abs/1710.02298).
